@@ -6,7 +6,7 @@
 
 "use strict";
 
-function orderSent() {
+function orderGiven() {
   // Setting a constant for taxes, toppings price, brownie price and coffee price
   const HST = 0.13;
   const PRICE_TOPPINGS = 0.50;
@@ -68,9 +68,9 @@ function orderSent() {
   
   // Calculating the subtotal, tax and total
   let subtotal = baseCost + costToppings + costBrownies + costCoffees;
-  let tax = subtotal * HST;
-  let total = subtotal + tax;
+  let taxes = subtotal * HST;
+  let total = subtotal + taxes;
 
   // Displaying the total to the user in the "results" div
-  document.getElementById("results").innerHTML = "Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of taxes added due to HST is $" + tax.toFixed(2) + ".<br>Your total is $" + total.toFixed(2) + ".";
+  document.getElementById("results").innerHTML = "Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of taxes added due to HST is $" + taxes.toFixed(2) + ".<br>Your total is $" + total.toFixed(2) + ".";
 }

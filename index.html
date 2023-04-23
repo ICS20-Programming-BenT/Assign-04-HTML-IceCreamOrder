@@ -77,7 +77,7 @@
       <h3>Your Order:</h3>
       
       <!-- Form for user input -->
-      <form action="javascript:orderSent()">
+      <form action="javascript:orderGiven()">
 
         <!-- First section -->
         <h5>Basic Order Information:</h5>
@@ -91,7 +91,7 @@
         </select><br><br>
         
         <!-- Multiple choice for choosing cone size -->
-        <label for="sandwich-size">Choose a size for your ice cream:</label>
+        <label for="cone-size">Choose a size for your ice cream:</label>
         <select id="cone-size" name="cone-size">
           <option value="0">-- Size --</option>
           <option value="small">Small (one scoop)</option>
@@ -153,12 +153,12 @@
         
         <!-- Submit button -->
         <input type="submit" id="button" value="Submit Order!" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-
-        <!-- Div for results -->
-        <div id="results"></div>
-        <br>
-        <br>
       </form>
+
+      <!-- Div for results -->
+      <div id="results"></div>
+      <br>
+      <br>
     </main>
   </body>
 </html>
