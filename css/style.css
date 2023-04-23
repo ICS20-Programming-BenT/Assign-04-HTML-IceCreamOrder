@@ -1,0 +1,42 @@
+/* Created by: Ben Thomson
+* Created on: 04/21/2023
+* This CSS file defines the style for index.html
+* ICS2O-Assign-04-HTML-IceCreamOrder
+*/
+
+body {
+  background-color: rgb(218 215 205);
+  font-weight: 900;
+  color: #344e41;
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: hsl(119deg 19% 42%);
+  padding: 40px;
+  text-align: center;
+}
+
+form {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  background-color: #a3b18a;
+  padding: 20px;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+  background-color: #a3b18a;
+  padding: 20px;
+}
+
+table, th, td {
+  border: 3px solid black;
+  border-collapse: collapse;
+}
+
+div {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 900;
+}
