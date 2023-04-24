@@ -6,14 +6,14 @@
 
 "use strict";
 
-function orderGiven() {
+function OrderGiven() {
   // Setting a constant for taxes, toppings price, brownie price and coffee price
   const HST = 0.13;
   const PRICE_TOPPINGS = 0.50;
   const PRICE_BROWNIES = 3.00;
   const PRICE_COFFEES = 2.00;
   
-  // Declaring cost of cone without toppings
+  // Declaring variable for base cost that will be determined later on
   let baseCost = 0;
   
   // Getting user input for cone type, cone size, number of brownies and number of coffees
@@ -61,6 +61,10 @@ function orderGiven() {
   else if ((coneType == "waffle") && (coneSize == "large")) {
     baseCost = 6.25;
   }
+
+  else {
+    baseCost = 0.00;
+  }
   
   // Determining the cost of the sides using number of sides variables and prices of sides constants
   let costBrownies = numBrownies * PRICE_BROWNIES;
@@ -72,5 +76,6 @@ function orderGiven() {
   let total = subtotal + taxes;
 
   // Displaying the total to the user in the "results" div
-  document.getElementById("results").innerHTML = "Your subtotal is $" + subtotal.toFixed(2) + ".<br>The amount of taxes added due to HST is $" + taxes.toFixed(2) + ".<br>Your total is $" + total.toFixed(2) + ".";
+  document.getElementById("order").innerHTML = "You ordered a" + coneSize + " ice cream with a" + coneType + ". You chose" + numToppings + " toppings for your ice cream, as well as " + numBrownies + " brownies and " + numCoffees + "coffees. Your subtotal is $" + subtotal.toFixed(2) + ".The amount of taxes added due to HST is $" + taxes.toFixed(2) + ".Your total is $" + total.toFixed(2) + ".";
+  
 }
