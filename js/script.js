@@ -7,6 +7,7 @@
 "use strict";
 
 function OrderGiven() {
+
   // Setting a constant for taxes, toppings price, brownie price and coffee price
   const HST = 0.13;
   const PRICE_TOPPINGS = 0.50;
@@ -19,8 +20,8 @@ function OrderGiven() {
   // Getting user input for cone type, cone size, number of brownies and number of coffees
   let coneType = document.getElementById("cone-type").value;
   let coneSize = document.getElementById("cone-size").value;
-  let numBrownies = parseInt(document.getElementById("brownies").value);
-  let numCoffees = parseInt(document.getElementById("coffees").value);
+  let numBrownies = parseInt(document.getElementById("amount-brownies").value);
+  let numCoffees = parseInt(document.getElementById("amount-coffees").value);
   
   // Determining the number of toppings selected based on number of checkboxes checked
   let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
@@ -76,6 +77,6 @@ function OrderGiven() {
   let total = subtotal + taxes;
 
   // Displaying the total to the user in the "results" div
-  document.getElementById("order").innerHTML = "You ordered a" + coneSize + " ice cream with a" + coneType + ". You chose" + numToppings + " toppings for your ice cream, as well as " + numBrownies + " brownies and " + numCoffees + "coffees. Your subtotal is $" + subtotal.toFixed(2) + ".The amount of taxes added due to HST is $" + taxes.toFixed(2) + ".Your total is $" + total.toFixed(2) + ".";
+  document.getElementById("order").innerHTML = "You ordered a " + coneSize + " ice cream with a " + coneType + " cone. You chose " + numToppings + " toppings for your ice cream, as well as " + numBrownies + " brownies and " + numCoffees + " coffees. Your subtotal is $" + subtotal.toFixed(2) + ". The amount of taxes added due to HST is $" + taxes.toFixed(2) + ". Your total is $" + total.toFixed(2) + ".";
   
 }
