@@ -6,6 +6,7 @@
 
 "use strict";
 
+// This function disables the topping checkboxes until the user affirms that they would like ice cream
 function toggleToppings() {
   let coneType = document.getElementById("cone-type").value;
 
