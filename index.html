@@ -39,6 +39,12 @@
       <!-- Web page heading -->
       <h1>Ice Cream Order</h1>
 
+      <!-- Image -->
+      <center>
+        <img src="./images/ice-cream.png" alt="Various Ice Cream Cones">
+      </center>
+      <br><br>
+
       <!-- Body text -->
       <p>Welcome to Ben's Ice Cream Parlor! Please use this web page to view our menu and place your order online! You can completely customize your order with various toppings and sides, and we will even calculate tax for you! Then, review your order and total and submit.</p>
       <br>
@@ -84,7 +90,7 @@
       
         <!-- Multiple choice for choosing cone type -->
         <label for="cone-type">Choose a type of cone for your ice cream:</label>
-        <select id="cone-type" name="cone-type">
+        <select id="cone-type" name="cone-type" onchange="toggleToppings()">
           <option value="0">-- Cone Type --</option>
           <option value="sugar">Sugar Cone</option>
           <option value="waffle">Waffle Cone</option>
@@ -105,37 +111,37 @@
         <!-- First MDL checkbox for chocolate syrup  -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Chocolate syrup</span>
-          <input type="checkbox" id="chocolate-syrup" name="chocolate-syrup" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="chocolate-syrup" name="chocolate-syrup" class="mdl-checkbox__input" disabled><br><br>
         </label>
         
         <!--Second MDL checkbox for whipped cream -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Whipped cream</span>
-          <input type="checkbox" id="whipped-cream" name="whipped-cream" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="whipped-cream" name="whipped-cream" class="mdl-checkbox__input" disabled><br><br>
         </label>
         
         <!-- Third MDL checkbox for chopped walnuts -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Chopped walnuts</span>
-          <input type="checkbox" id="Chopped-walnuts" name="Chopped-walnuts" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="chopped-walnuts" name="chopped-walnuts" class="mdl-checkbox__input" disabled><br><br>
         </label>
         
         <!-- Fourth MDL checkbox for rainbow sprinkles -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Rainbow sprinkles</span>
-          <input type="checkbox" id="rainbow-sprinkles" name="rainbow-sprinkles" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="rainbow-sprinkles" name="rainbow-sprinkles" class="mdl-checkbox__input" disabled><br><br>
         </label>
         
         <!-- Fifth MDL checkbox for Maraschino Cherries -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Maraschino Cherries</span>
-          <input type="checkbox" id="maraschino-cherries" name="maraschino-cherries" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="maraschino-cherries" name="maraschino-cherries" class="mdl-checkbox__input" disabled><br><br>
         </label>
         
         <!-- Sixth MDL checkbox for caramel bits -->
         <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect">
           <span class="mdl-checkbox__label">Caramel bits</span>
-          <input type="checkbox" id="caramel-bits" name="caramel-bits" class="mdl-checkbox__input"><br><br>
+          <input type="checkbox" id="caramel-bits" name="caramel-bits" class="mdl-checkbox__input" disabled><br><br>
         </label>
         <br>
         <br>

@@ -6,6 +6,27 @@
 
 "use strict";
 
+function toggleToppings() {
+  let coneType = document.getElementById("cone-type").value;
+
+  if (coneType !== "0") {
+    document.getElementById("chocolate-syrup").disabled = false;
+    document.getElementById("whipped-cream").disabled = false;
+    document.getElementById("chopped-walnuts").disabled = false;
+    document.getElementById("rainbow-sprinkles").disabled = false;
+    document.getElementById("maraschino-cherries").disabled = false;
+    document.getElementById("caramel-bits").disabled = false;
+  } 
+  else {
+    document.getElementById("chocolate-syrup").disabled = true;
+    document.getElementById("whipped-cream").disabled = true;
+    document.getElementById("chopped-walnuts").disabled = true;
+    document.getElementById("rainbow-sprinkles").disabled = true;
+    document.getElementById("maraschino-cherries").disabled = true;
+    document.getElementById("caramel-bits").disabled = true;
+  }
+}
+
 function OrderGiven() {
 
   // Setting a constant for taxes, toppings price, brownie price and coffee price
@@ -48,7 +69,7 @@ function OrderGiven() {
     baseCost = 5.00;
   }
     
-  // if the cone type is waffle and the size is medium
+  // If the cone type is waffle and the size is medium
   else if ((coneType == "waffle") && (coneSize == "medium")) {
     baseCost = 5.25;
   }
@@ -58,7 +79,7 @@ function OrderGiven() {
     baseCost = 6.00;
   }
     
-  //if the cone type is waffle and the size is large
+  // If the cone type is waffle and the size is large
   else if ((coneType == "waffle") && (coneSize == "large")) {
     baseCost = 6.25;
   }
@@ -77,6 +98,6 @@ function OrderGiven() {
   let total = subtotal + taxes;
 
   // Displaying the total to the user in the "results" div
-  document.getElementById("order").innerHTML = "You ordered a " + coneSize + " ice cream with a " + coneType + " cone. You chose " + numToppings + " toppings for your ice cream, as well as " + numBrownies + " brownies and " + numCoffees + " coffees. Your subtotal is $" + subtotal.toFixed(2) + ". The amount of taxes added due to HST is $" + taxes.toFixed(2) + ". Your total is $" + total.toFixed(2) + ".";
+  document.getElementById("order").innerHTML = "You ordered a " + coneSize + " ice cream with a " + coneType + " cone. You chose " + numToppings + " topping(s) for your ice cream, as well as " + numBrownies + " brownie(s) and " + numCoffees + " coffee(s). Your subtotal is $" + subtotal.toFixed(2) + ". The amount of taxes added due to HST is $" + taxes.toFixed(2) + ". Your total is $" + total.toFixed(2) + ".";
   
 }
