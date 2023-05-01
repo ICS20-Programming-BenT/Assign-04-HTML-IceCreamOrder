@@ -9,8 +9,9 @@
 // This function disables the topping checkboxes until the user affirms that they would like ice cream
 function toggleToppings() {
   let coneType = document.getElementById("cone-type").value;
+  let coneSize = document.getElementById("cone-size").value;
 
-  if (coneType !== "0") {
+  if ((coneType != "0") && (coneSize != "0")) {
     document.getElementById("chocolate-syrup").disabled = false;
     document.getElementById("whipped-cream").disabled = false;
     document.getElementById("chopped-walnuts").disabled = false;
@@ -36,7 +37,7 @@ function OrderGiven() {
   const PRICE_BROWNIES = 3.00;
   const PRICE_COFFEES = 2.00;
   
-  // Declaring variable for base cost that will be determined later on
+  // Declaring variable for base cost, subtotal, taxes and total that will be determined later on
   let baseCost = 0;
   
   // Getting user input for cone type, cone size, number of brownies and number of coffees
@@ -99,6 +100,11 @@ function OrderGiven() {
   let total = subtotal + taxes;
 
   // Displaying the total to the user in the "results" div
-  document.getElementById("order").innerHTML = "You ordered a " + coneSize + " ice cream with a " + coneType + " cone. You chose " + numToppings + " topping(s) for your ice cream, as well as " + numBrownies + " brownie(s) and " + numCoffees + " coffee(s). Your subtotal is $" + subtotal.toFixed(2) + ". The amount of taxes added due to HST is $" + taxes.toFixed(2) + ". Your total is $" + total.toFixed(2) + ".";
-  
+  if ((coneType == "0") || (coneSize == "0")) {
+   document.getElementById("order").innerHTML = "You did not order an ice cream or any toppings. You ordered " + numBrownies + " brownie(s) and " + numCoffees + " coffee(s). Your subtotal is $" + subtotal.toFixed(2) + ". The amount of taxes added due to HST is $" + taxes.toFixed(2) + ". Your total is $" + total.toFixed(2) + ".";
+  }
+
+  else {
+    document.getElementById("order").innerHTML = "You ordered a " + coneSize + " ice cream with a " + coneType + " cone. You chose " + numToppings + " topping(s) for your ice cream, as well as " + numBrownies + " brownie(s) and " + numCoffees + " coffee(s). Your subtotal is $" + subtotal.toFixed(2) + ". The amount of taxes added due to HST is $" + taxes.toFixed(2) + ". Your total is $" + total.toFixed(2) + ".";
+  }
 }
